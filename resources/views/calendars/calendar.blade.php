@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>FullCalendar</title>
+        <title>AddEvent</title>
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         @vite(['resources/css/app.css', 'resources/js/app.js']) <!-- vite用の記述忘れずに -->
@@ -11,20 +11,28 @@
     <body>
         <x-app-layout>
             <x-slot name="header">
+                Fill Out Your Event
                 </x-slot>
         <!-- 以下のdivタグ内にカレンダーを表示 -->
         <div id='calendar'></div>
         
         <x-primary-button class="ml-4">
                 <a href="/">DONE</a>
-            </x-primary-button>
-        
+        </x-primary-button>
         
         <div id="modal-add" class="modal">
             <div class="modal-contents">
                 <form method="POST" action="{{ route('create') }}">
                     @csrf
                     <input id="new-id" type="hidden" name="id" value="" />
+                    
+                    <label for="user_id">YourName</label>
+                    <select id="new-user_id" name="user_id">
+                        @foreach($users as $user)
+                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+                        @endforeach
+                    </select>
+                    
                     <label for="event_title">タイトル</label>
                     <input id="new-event_title" class="input-title" type="text" name="event_title" value="" />
                     <label for="start_date">開始日時</label>
@@ -39,12 +47,6 @@
                         <option value="green">緑</option>
                         <option value="red">赤</option>
                     </select>
-                    <label for="user_id">USER</label>
-                    <select id="user_id" name="user_id">
-                        @foreach($users as $user)
-                        <option value="{{ $user->id }}">{{ $user->name }}</option>
-                        @endforeach
-                    </select>
                     <button type="button" onclick="closeAddModal()">キャンセル</button>
                     <button type="submit">決定</button>
                 </form>
@@ -57,6 +59,14 @@
                     @csrf
                     @method('PUT')
                     <input type="hidden" id="id" name="id" value="" />
+                    
+                    <label for="user_id">YourName</label>
+                    <select id="user_id" name="user_id">
+                        @foreach($users as $user)
+                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+                        @endforeach
+                    </select>
+                    
                     <label for="event_title">タイトル</label>
                     <input class="input-title" type="text" id="event_title" name="event_title" value="" />
                     <label for="start_date">開始日時</label>
@@ -71,14 +81,8 @@
                         <option value="green">緑</option>
                         <option value="red">赤</option>
                     </select>
-                    <label for="user_id">USER</label>
-                    <select id="user_id" name="user_id">
-                        @foreach($users as $user)
-                        <option value="{{ $user->id }}">{{ $user->name }}</option>
-                        @endforeach
-                    </select>
                     <button type="button" onclick="closeUpdateModal()">キャンセル</button>
-                    <button type="submit">決定</button>
+                    <button type="submit" onclick="closeUpdateModal()">決定</button>
                 </form>
                 <form id="delete-form" method="post" action="{{ route('delete') }}">
                     @csrf
@@ -154,5 +158,15 @@ select{
     padding: 2px;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+.ml-4{
+    
+    margin : 20px ;
+     padding : 12px 100px 12px 100px ;
+     background-color : navy ;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
 </style>

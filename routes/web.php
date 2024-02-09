@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\DmController;
+use App\Http\Controllers\HomeEventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,5 +48,23 @@ Route::post('/calendar/create', [EventController::class, 'create'])->name("creat
 Route::post('/calendar/get',  [EventController::class, 'get'])->name("get");
 Route::put('/calendar/update', [EventController::class, 'update'])->name("update");
 Route::delete('/calendar/delete', [EventController::class, 'delete'])->name("delete");
+
+
+//homeカレンダー
+Route::get('/home_calendar', [HomeEventController::class, 'show'])->name("show_home");
+Route::post('/home_calendar/create', [HomeEventController::class, 'create'])->name("create");
+Route::post('/home_calendar/get',  [HomeEventController::class, 'get'])->name("get");
+Route::put('/home_calendar/update', [HomeEventController::class, 'update'])->name("update");
+
+
+
+//DM
+Route::controller(DmController::class)->middleware(['auth'])->group(function(){
+    Route::get('/dm', 'dm')->name('dm');
+    Route::post('/add', 'add')->name('add');
+    Route::get('/result/ajax', 'getData');
+
+});
+
 
 require __DIR__.'/auth.php';

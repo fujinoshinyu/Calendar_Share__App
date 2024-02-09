@@ -13,7 +13,7 @@ function formatDate(date, pos) {
 }
 
 // カレンダーを表示させたいタグのidを取得
-var calendarEl = document.getElementById("calendar");
+var calendarEl = document.getElementById("home_calendar");
 
 // new Calender(カレンダーを表示させたいタグのid, {各種カレンダーの設定});
 // "calendar"というidがないbladeファイルではエラーが出てしまうので、if文で除外。
@@ -30,7 +30,6 @@ if (calendarEl !== null) {
             click: function() {
                 // 初期化（以前入力した値をクリアする）
                 document.getElementById("new-id").value = "";
-                //document.getElementById("new-user_id").value = "";
                 document.getElementById("new-event_title").value = "";
                 document.getElementById("new-start_date").value = "";
                 document.getElementById("new-end_date").value = "";
@@ -46,7 +45,7 @@ if (calendarEl !== null) {
             // コンマのみで区切るとページ表示時に間が空かず、半角スペースで区切ると間が空く（半角があるかないかで表示が変わることに注意）
             start: "prev,next today", // ヘッダー左（前月、次月、今日の順番で左から配置）
             center: "title", // ヘッダー中央（今表示している月、年）
-            end: "eventAddButton dayGridMonth,timeGridWeek", // ヘッダー右（月形式、時間形式）
+            end: "dayGridMonth,timeGridWeek", // addEventのボタン処理は書かない！　ヘッダー右（月形式、時間形式）
         },
         height: "auto", // 高さをウィンドウサイズに揃える
         events: function (info, successCallback, failureCallback) { // eventsはページが切り替わるたびに実行される
@@ -72,7 +71,7 @@ if (calendarEl !== null) {
     eventClick: function(info) {
         // console.log(info.event); // info.event内に予定の全情報が入っているので、必要に応じて参照すること
         document.getElementById("id").value = info.event.id;
-        document.getElementById("user_id").value = info.user.id;
+        document.getElementById("user_id").value = info.event.id;
         document.getElementById("delete-id").value = info.event.id;
         document.getElementById("event_title").value = info.event.title;
         document.getElementById("start_date").value = formatDate(info.event.start);
