@@ -16,7 +16,7 @@ class Event extends Model
         'end_date',
         'event_color',
         'event_border_color',
-        'user_id'
+        'user_id' //外部キー
     ];
     
     public function user() {

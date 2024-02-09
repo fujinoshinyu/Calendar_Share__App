@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
-use App\Models\User;
 
-class EventController extends Controller
+class HomeEventController extends Controller
 {
-    public function show(User $user){
-        return view("calendars/calendar")->with(['users' => $user->get()]);
+    public function show(){
+        return view("home_calendars/home_calendar");
     }
+    
     
     public function create(Request $request, Event $event){
         // バリデーション（eventsテーブルの中でNULLを許容していないものをrequired）
@@ -19,11 +19,9 @@ class EventController extends Controller
             'start_date' => 'required',
             'end_date' => 'required',
             'event_color' => 'required',
-            'user_id' => 'required',
         ]);
 
         // 登録処理
-        
         $event->event_title = $request->input('event_title');
         $event->event_body = $request->input('event_body');
         $event->start_date = $request->input('start_date');
@@ -36,6 +34,7 @@ class EventController extends Controller
         // カレンダー表示画面にリダイレクトする
         return redirect(route("show"));
     }
+    
     
     public function get(Request $request, Event $event){
         // バリデーション
@@ -52,14 +51,12 @@ class EventController extends Controller
         return $event->query()
             // DBから取得する際にFullCalendarの形式にカラム名を変更する
             ->select(
-                //'user_id as user',
                 'id',
                 'event_title as title',
                 'event_body as description',
                 'start_date as start',
                 'end_date as end',
                 'event_color as backgroundColor',
-                'user_id',
                 'event_border_color as borderColor'
             )
             // 表示されているカレンダーのeventのみをDBから検索して表示
@@ -77,18 +74,9 @@ class EventController extends Controller
         $input->end_date = date("Y-m-d", strtotime("{$request->input('end_date')} +1 day"));
         $input->event_color = $request->input('event_color');
         $input->event_border_color = $request->input('event_color');
-        $input->user_id = $request->input('user_id');
 
         // 更新する予定をDBから探し（find）、内容が変更していたらupdated_timeを変更（fill）して、DBに保存する（save）
         $event->find($request->input('id'))->fill($input->attributesToArray())->save(); // fill()の中身はArray型が必要だが、$inputのままではコレクションが返ってきてしまうため、Array型に変換
-
-        // カレンダー表示画面にリダイレクトする
-        return redirect(route("show"));
-    }
-    
-    public function delete(Request $request, Event $event){
-        // 削除する予定をDBから探し（find）、DBから物理削除する（delete）
-        $event->find($request->input('id'))->delete();
 
         // カレンダー表示画面にリダイレクトする
         return redirect(route("show"));

@@ -48,5 +48,9 @@ class User extends Authenticatable
 return $this->hasMany(Event::class); 
     
 }
+public function getPaginateByLimit(int $limit_count = 15) {
+// updated_atで降順に並べたあと、limitで件数制限をかける
+return $this->orderBy('updated_at', 'DESC')->paginate($limit_count); }
+
 
 }

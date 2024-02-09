@@ -6,13 +6,16 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Http\Requests\PostRequest;
 use App\Models\Category;
+use App\Models\User;
+use App\Models\Event;
 
 class PostController extends Controller
 {
-    public function index(Post $post) {
-return view('posts/index')->with(['posts' => $post->getPaginateByLimit(1)]);  //getPaginateByLimit()はPost.phpで定義したメソッドです。
+    public function index(User $user) {
+return view('posts/index')->with(['users' => $user->getPaginateByLimit(15)]);//getPaginateByLimit()はPost.phpで定義したメソッドです。
 }
-public function show(Post $post) {
+
+public function show(Users $user) {
 return view('posts/show')->with(['post' => $post]); //'post'はbladeファイルで使う変数。中身は$postはid=1のPostインスタンス。
 }
 public function create(Category $category) 
