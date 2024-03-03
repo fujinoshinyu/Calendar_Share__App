@@ -98,25 +98,6 @@
                 </form>
             </div>
         </div>
-        
-        
-          
-          
-          
-        
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
            </x-app-layout>
       </body>
 </html>
@@ -212,6 +193,5 @@ select{
     margin: 0 auto;
 }
 
-    
-    </style scoped>
+</style scoped>
           

@@ -56,8 +56,6 @@ Route::post('/home_calendar/create', [HomeEventController::class, 'create'])->na
 Route::post('/home_calendar/get',  [HomeEventController::class, 'get'])->name("get");
 Route::put('/home_calendar/update', [HomeEventController::class, 'update'])->name("update");
 
-
-
 //DM
 Route::controller(DmController::class)->middleware(['auth'])->group(function(){
     Route::get('/dm', 'dm')->name('dm');
