@@ -1,3 +1,39 @@
+# ポートフォリオ概要 - カレンダーシェアアプリ
+サイトURL:https://calendar-share-app-a9f35042d7c6.herokuapp.com/
+ポートフォリオをご覧いただきありがとうございます。
+インスタグラムのように身近なアプリケーションでありながら、今までにない発想のアプリを作りたいと考え、
+写真を投稿するのではなく、カレンダーとしての予定を投稿することで、誰もが日々使用するであろうカレンダーとしての機能だけでなく、
+お互いの予定を共有できるプラスαの楽しみを兼ね備えたアプリケーションを作成しようと考えました。
+現時点で、改善点や追加したい機能がある状態ではありますが、ご確認いただければと存じます。
+
+# 使用技術
+- PHP 8.2.9
+- Laravel Framework 9.52.16
+- JavaScript 
+- Mysql 15.1
+- AWS
+  - EC2
+  - Cloud9
+  - VPC
+- Laravel Breeze
+- Web API (非同期チャット機能)
+- Calendar.JS
+- Jquery
+- ajax
+
+#機能一覧
+- ユーザー登録/ログイン機能
+- カレンダー表示機能（HOME）
+- カレンダー投稿機能
+- - ユーザー選択
+  - タイトル入力
+  - コメント入力
+  - カラー選択
+- 予定編集/削除機能
+- 登録ユーザーの一覧
+- ページネーション機能
+- 非同期チャット機能
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
