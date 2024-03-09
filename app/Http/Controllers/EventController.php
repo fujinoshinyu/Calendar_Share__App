@@ -70,6 +70,7 @@ class EventController extends Controller
     
     public function update(Request $request, Event $event){
         $input = new Event();
+        
 
         $input->event_title = $request->input('event_title');
         $input->event_body = $request->input('event_body');
