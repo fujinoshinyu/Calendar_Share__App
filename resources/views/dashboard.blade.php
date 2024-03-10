@@ -22,21 +22,13 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <p>
-                    [機能]</br>
-                    ・ログイン機能</br>
-                    ・HOMEで各ユーザが投稿したカレンダー予定をシェア</br>
-                    ・CREATEで予定を追加,編集,削除</br>
-                    ・MESSAGEで簡単なDMのやりとり</br>
-                    　　　</br>
-                    
-                    [未完成の機能]</br>
-                    ・HOMEの予定モーダルを開くと、誰の投稿なのか分かるように投稿ユーザを表示する処理</br>
-                    ・DM機能の個別にやりとりするための処理,画像アップロード等</br>
-                    ・HOMEの完成イメージ⇩</br>
-                    ・フォローフォローワー機能</br>
-                    ・ユーザアイコンや細かい装飾etc...</br>
+                    ポートフォリオをご覧いただきありがとうございます。</br>
+                    インスタグラムのように身近なアプリケーションでありながら、今までにない発想のアプリを作りたいと考え、 写真を投稿するのではなく、カレンダーとしての予定を投稿することで、誰もが日々使用するであろうカレンダーとしての機能だけでなく、 お互いの予定を共有できるプラスαの楽しみを兼ね備えたアプリケーションを作成しようと考えました。 現時点で、改善点や追加したい機能がある状態ではありますが、ご確認いただければ幸いです。
+
                     </p>
-                    
+                    <x-primary-button class="ml-4">
+                        <a href="/">go home</a>
+                    </x-primary-button>
                 </div>
             </div>
         </div>
@@ -44,3 +36,16 @@
 </x-app-layout>
 </body>
 </html>
+
+<style scoped>
+    .ml-4{
+    
+    margin : 20px ;
+     padding : 12px 100px 12px 100px ;
+     background-color : navy ;
+    display: flex;
+    justify-content: center;
+    
+}
+
+</style scoped>
