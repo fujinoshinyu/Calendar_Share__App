@@ -54,5 +54,5 @@
 # 完成予想ER図
 <img width="516" alt="Screenshot 2024-02-05 at 04 10 52" src="https://github.com/fujinoshinyu/Calendar_Share__App/assets/79220429/d2267cf9-e671-488b-b382-0d95d48f3143">
 
-<p>※セキュリティ等の問題から、herokuでの公開に移行準備中です。</p>
+<p>※セキュリティ等の観点から、herokuでのサイト公開に移行準備中です。</p>
 
