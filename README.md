@@ -1,6 +1,6 @@
 # ポートフォリオ概要 - カレンダーシェアアプリ
 
-サイトURL:https://calendar-share-app-a9f35042d7c6.herokuapp.com/
+<h2>サイトURL:https://calendar-share-app-a9f35042d7c6.herokuapp.com/</h2>
 ポートフォリオをご覧いただきありがとうございます。
 インスタグラムのように身近なアプリケーションでありながら、今までにない発想のアプリを作りたいと考え、
 写真を投稿するのではなく、カレンダーとしての予定を投稿することで、誰もが日々使用するであろうカレンダーとしての機能だけでなく、
@@ -34,6 +34,13 @@
 - 登録ユーザーの一覧
 - ページネーション機能（登録ユーザー）
 - 非同期チャット機能
+
+#未完成の機能
+- 投稿したユーザーの表示（誰の投稿なのか表示する）
+- cloudinalyを活用した画像アップロード機能
+- プロフィール画像の設定やマイページ等の細かい設定
+- フォロー、フォロワー機能
+- UI等の細かい修正
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
