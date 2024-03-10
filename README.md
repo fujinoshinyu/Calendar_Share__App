@@ -31,7 +31,7 @@
   - カラー選択
 - 予定編集/削除機能
 - 登録ユーザーの一覧
-- ページネーション機能
+- ページネーション機能（登録ユーザー）
 - 非同期チャット機能
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
