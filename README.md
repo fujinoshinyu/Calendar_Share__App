@@ -1,4 +1,4 @@
-# ポートフォリオ概要 - カレンダーシェアアプリ
+<img width="1396" alt="Screenshot 2024-03-10 at 19 39 30" src="https://github.com/fujinoshinyu/Calendar_Share__App/assets/79220429/2af2b635-756a-4348-a1e5-507d7f2fc38b"># ポートフォリオ概要 - カレンダーシェアアプリ
 
 <h2>サイトURL:https://calendar-share-app-a9f35042d7c6.herokuapp.com/</h2>
 ポートフォリオをご覧いただきありがとうございます。
@@ -41,6 +41,19 @@
 - プロフィール画像の設定やマイページ等の細かい設定
 - フォロー、フォロワー機能
 - UI等の細かい修正
+
+#HOME
+<img width="1396" alt="Screenshot 2024-03-10 at 19 39 30" src="https://github.com/fujinoshinyu/Calendar_Share__App/assets/79220429/a674261c-565e-4cc0-9190-5e7a7006f0ac">
+
+#CREATE
+<img width="1438" alt="Screenshot 2024-03-10 at 19 40 13" src="https://github.com/fujinoshinyu/Calendar_Share__App/assets/79220429/f436417c-a304-430c-a9bd-f7fc58729c23">
+
+#DM
+<img width="1427" alt="Screenshot 2024-03-10 at 19 40 38" src="https://github.com/fujinoshinyu/Calendar_Share__App/assets/79220429/d4b2a02b-8d04-4b5b-aa5f-59ce897a3e73">
+
+#完成予想ER図
+<img width="516" alt="Screenshot 2024-02-05 at 04 10 52" src="https://github.com/fujinoshinyu/Calendar_Share__App/assets/79220429/d2267cf9-e671-488b-b382-0d95d48f3143">
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
