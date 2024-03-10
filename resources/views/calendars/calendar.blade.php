@@ -168,6 +168,6 @@ select{
      background-color : navy ;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 auto;s
 }
 </style>
