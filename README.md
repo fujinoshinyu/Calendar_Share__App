@@ -1,5 +1,4 @@
-<img width="1396" alt="Screenshot 2024-03-10 at 19 39 30" src="https://github.com/fujinoshinyu/Calendar_Share__App/assets/79220429/2af2b635-756a-4348-a1e5-507d7f2fc38b"># ポートフォリオ概要 - カレンダーシェアアプリ
-
+# ポートフォリオ概要 - カレンダーシェアアプリ
 <h2>サイトURL:https://calendar-share-app-a9f35042d7c6.herokuapp.com/</h2>
 ポートフォリオをご覧いただきありがとうございます。
 インスタグラムのように身近なアプリケーションでありながら、今までにない発想のアプリを作りたいと考え、
