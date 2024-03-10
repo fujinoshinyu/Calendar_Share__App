@@ -53,6 +53,7 @@
             </div>
         </div>
         
+        
         <div id="modal-update" class="modal">
             <div class="modal-contents">
                 <form method="POST" action="{{ route('update') }}" >
